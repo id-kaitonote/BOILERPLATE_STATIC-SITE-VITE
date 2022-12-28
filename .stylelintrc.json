@@ -1,0 +1,43 @@
+{
+  "plugin": ["stylelint-config-recess-order", "stylelint-prettier"],
+  "extends": [
+    "stylelint-config-standard",
+    "stylelint-config-recess-order",
+    "stylelint-config-recommended-scss",
+    "stylelint-prettier/recommended",
+    "stylelint-config-prettier"
+  ],
+  "rules": {
+    "font-weight-notation": null,
+    "max-line-length": null,
+    "function-url-quotes": "never",
+    "no-descending-specificity": null,
+    "indentation": 2,
+    "selector-class-pattern": null,
+    "at-rule-no-unknown": [
+      true,
+      {
+        "ignoreAtRules": [
+          "function",
+          "if",
+          "else",
+          "for",
+          "each",
+          "include",
+          "mixin",
+          "content",
+          "forward",
+          "use",
+          "charaset",
+          "return"
+        ]
+      }
+    ],
+    "scss/at-rule-no-unknown": true
+  },
+  "ignoreFiles": [
+    "node_modules/**/*.css",
+    "app/dist/**/*.css",
+    "app/src/assets/styles/Foundation/_reset.scss"
+  ]
+}

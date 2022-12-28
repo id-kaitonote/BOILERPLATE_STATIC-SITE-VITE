@@ -1,0 +1,78 @@
+@use '../Foundation/variables' as *;
+@use '../Foundation/mixin' as *;
+@use '../Foundation/functions' as *;
+
+.l-header {
+  position: relative;
+  z-index: 9999;
+  width: 100%;
+  height: headerheight();
+  padding: 0 20px;
+  margin: 0 auto;
+
+  &__logo {
+    width: 250px;
+
+    &--link {
+      color: color(main);
+    }
+  }
+
+  &__inner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  &__nav {
+    @include mq-down(xmd) {
+      width: 100%;
+      height: 100%;
+      background: color(main);
+      opacity: 0.8;
+    }
+
+    &--wrapper {
+      @include mq-down(xmd) {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: -9999;
+        width: 100%;
+        height: 100%;
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity $comMS $comES, display $comMS $comES,
+          visibility $comMS $comES;
+      }
+
+      &.-is-active {
+        @include mq-down(xmd) {
+          z-index: 9999;
+          visibility: visible;
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+
+  &__link {
+    color: color(main);
+    @include mq-down(xmd) {
+      color: color(white);
+    }
+  }
+}

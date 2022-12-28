@@ -1,0 +1,9 @@
+@use '../Foundation/variables' as *;
+@use '../Foundation/mixin' as *;
+
+.p-cards-area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: min(100%, 1200px);
+}

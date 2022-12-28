@@ -1,0 +1,25 @@
+@use '../Foundation/variables' as *;
+@use '../Foundation/mixin' as *;
+
+.l-mainWrap {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.l-page {
+  flex: 1;
+  overflow-x: hidden;
+}
+
+.l-lg {
+  @include mq-down(md) {
+    display: none !important;
+  }
+}
+
+.l-sm {
+  @include mq-up(md) {
+    display: none !important;
+  }
+}

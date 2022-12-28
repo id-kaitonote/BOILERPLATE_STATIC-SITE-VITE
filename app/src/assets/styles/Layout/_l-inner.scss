@@ -1,0 +1,17 @@
+@use '../Foundation/variables' as *;
+@use '../Foundation/mixin' as *;
+
+.l-inner {
+  width: calc(100% - 40px);
+  max-width: $mainW;
+  margin-right: auto;
+  margin-left: auto;
+
+  &.-size-m {
+    max-width: 1100px;
+  }
+
+  &.-size-s {
+    max-width: 800px;
+  }
+}

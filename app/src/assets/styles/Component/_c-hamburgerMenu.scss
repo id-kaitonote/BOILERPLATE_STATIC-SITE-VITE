@@ -1,0 +1,90 @@
+@use '../Foundation/variables' as *;
+@use '../Foundation/mixin' as *;
+@use '../Foundation/functions' as *;
+
+.c-hamburgerMenu {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  z-index: 9999;
+  width: 25px;
+  height: 21px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all $comMS $comES;
+
+  @include mq-up(xmd) {
+    display: none;
+  }
+
+  span {
+    position: absolute;
+    display: inline-block;
+    width: 100%;
+    height: 2px;
+    background: color(main);
+    transition: background $comMS $comES, transform $comMS $comES;
+    transform: translateY(0) rotate(0deg);
+    transform-origin: center;
+
+    &:first-child {
+      top: 0;
+    }
+
+    &:nth-child(2) {
+      top: 0;
+      bottom: 0;
+      margin: auto 0;
+    }
+
+    &:last-child {
+      bottom: 0;
+    }
+  }
+
+  @keyframes click-animation {
+    0% {
+      transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+      transform: translateY(10px) rotate(0deg);
+    }
+
+    100% {
+      transform: translateY(10px) rotate(45deg);
+    }
+  }
+
+  @keyframes click-animation02 {
+    0% {
+      transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+      transform: translateY(-10px) rotate(0deg);
+    }
+
+    100% {
+      transform: translateY(-10px) rotate(-45deg);
+    }
+  }
+
+  &.-close {
+    span {
+      background: color(white);
+
+      &:first-child {
+        animation: click-animation 0.8s $easeOutCubic forwards;
+      }
+
+      &:nth-child(2) {
+        opacity: 0;
+      }
+
+      &:last-child {
+        animation: click-animation02 0.8s $easeOutCubic forwards;
+      }
+    }
+  }
+}

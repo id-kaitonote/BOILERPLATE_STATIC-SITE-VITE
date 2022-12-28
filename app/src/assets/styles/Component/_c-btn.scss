@@ -1,0 +1,59 @@
+@use '../Foundation/variables' as *;
+@use '../Foundation/mixin' as *;
+@use '../Foundation/functions' as *;
+
+// mixin
+@mixin btn() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color $comMS $comES, background $comMS $comES,
+    border $comMS $comES;
+  @include fz(16, 18);
+}
+
+@mixin btnSize($width: false, $height: false) {
+  width: min(100%, #{$width});
+  height: $height;
+}
+
+@mixin btnColor($color: false, $bg: false, $border: false) {
+  color: color($color);
+  background: color($bg);
+  border: 1px solid color($border);
+}
+
+@mixin btnHover($color: false, $bg: false, $border: false) {
+  @include mq-up(md) {
+    &:hover {
+      color: color($color);
+      background: color($bg);
+      border: 1px solid color($border);
+    }
+  }
+}
+
+// variables
+$btnW: (
+  l: 200px,
+  m: 150px,
+  s: 100px
+);
+$btnH: 50px;
+
+// styles
+.c-btn {
+  @include btn();
+  @include btnSize(map-get($btnW, l), $btnH);
+  @include btnColor(main, white, main);
+  @include btnHover(white, main, white);
+
+  &.-size-s {
+    @include btnSize(map-get($btnW, s), $btnH);
+  }
+
+  &.-black {
+    @include btnColor(white, main, white);
+    @include btnHover(main, white, main);
+  }
+}

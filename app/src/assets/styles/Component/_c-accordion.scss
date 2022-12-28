@@ -1,0 +1,27 @@
+@use '../Foundation/variables' as *;
+@use '../Foundation/mixin' as *;
+@use '../Foundation/functions' as *;
+
+.c-accordion {
+  width: 100%;
+  $padding: 20px;
+
+  &__title {
+    padding: $padding;
+    color: color(white);
+    cursor: pointer;
+    background: color(main);
+    border: solid 1px color(main);
+  }
+
+  &__desc {
+    overflow: hidden;
+    border-right: solid 1px color(main);
+    border-bottom: solid 1px color(main);
+    border-left: solid 1px color(main);
+
+    &--inner {
+      padding: $padding;
+    }
+  }
+}

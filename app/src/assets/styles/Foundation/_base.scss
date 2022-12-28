@@ -1,0 +1,40 @@
+@use '../Foundation/variables' as *;
+@use '../Foundation/mixin' as *;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: $fontFamily;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.pc-only {
+  @include mq-down(md) {
+    display: none !important;
+  }
+}
+
+.sp-only {
+  @include mq-up(md) {
+    display: none !important;
+  }
+}
