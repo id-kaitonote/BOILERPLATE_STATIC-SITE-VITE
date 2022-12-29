@@ -66,13 +66,13 @@ yarn build
 # Preview
 yarn preview
 
-# Typescript lint
+# Typescript Lint
 yarn lint:ts
 
-# Typescript format
+# Typescript Format
 yarn format:ts
 
-# Style lint
+# Style Lint
 yarn lint:scss
 
 # Style Format
