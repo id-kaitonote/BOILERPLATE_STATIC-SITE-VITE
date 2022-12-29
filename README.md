@@ -6,9 +6,9 @@
   - [Overview](#Overview)
   - [Features](#Features)
   - [Requirement](#Requirement)
-  - [Quick Start](#QuickStart)
+  - [QuickStart](#QuickStart)
   - [Build](#Build)
-  - [Lint & Format](#Lint&Format)
+  - [OtherScripts](#OtherScripts)
   - [Directory](#Directory)
   - [Licence](#Licence)
 
@@ -60,7 +60,7 @@ yarn build
 ```
 
 
-## Other Scripts
+## OtherScripts
 
 ``` bash
 # Preview
