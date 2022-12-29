@@ -3,7 +3,6 @@ Web制作における静的サイトを構築するためのボイラープレ�
 主に下記の技術を採用して構築されています。
 
 ・Vite
-・Pug
 ・DartSass
 ・PostCSS
 ・TypeScript
@@ -15,7 +14,6 @@ Web制作における静的サイトを構築するためのボイラープレ�
 
 ``` bash
 yarn
-yarn dev
 ```
 
 ## Scripts

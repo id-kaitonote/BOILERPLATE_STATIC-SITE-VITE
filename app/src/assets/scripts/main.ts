@@ -1,7 +1,15 @@
-import AddClassInWindow from './module/AddClassAnimation'
+import { CreateThreeScene } from './module/CreateThreeScene'
+// import { debounce, throttle } from 'throttle-debounce'
 
-new AddClassInWindow()
+const onDOMContentLoaded = () => {
+  new CreateThreeScene()
+}
+// const onLoad = () => {}
+// const onScroll = () => {}
+// const onResize = () => {}
 
-const message = 'Hello World!'
-
-console.log(message)
+// addEventListeners
+window.addEventListener('DOMContentLoaded', onDOMContentLoaded)
+// window.addEventListener('load', onLoad)
+// window.addEventListener('scroll', throttle(100, onScroll), false)
+// window.addEventListener('resize', debounce(100, onResize), false)

@@ -17,7 +17,7 @@
   },
   "include": [
     "app/src/**/*",
-    "app/src/assets/scripts/vite-env.d.ts",
+    "app/src/assets/scripts/@types/vite-env.d.ts",
     "app/public"
   ]
 }

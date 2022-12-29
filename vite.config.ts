@@ -3,6 +3,7 @@ import checker from 'vite-plugin-checker'
 import { resolve } from 'path'
 import autoprefixer from 'autoprefixer'
 import viteImagemin from 'vite-plugin-imagemin'
+import glsl from 'vite-plugin-glsl'
 
 export default defineConfig({
   base: './',
@@ -68,6 +69,22 @@ export default defineConfig({
           },
         ],
       },
+    }),
+    glsl({
+      include: [
+        '**/*.glsl',
+        '**/*.wgsl',
+        '**/*.vert',
+        '**/*.frag',
+        '**/*.vs',
+        '**/*.fs',
+      ],
+      exclude: undefined,
+      warnDuplicatedImports: true,
+      defaultExtension: 'glsl',
+      compress: false,
+      watch: true,
+      root: '/',
     }),
   ],
   css: {
