@@ -14,7 +14,8 @@
 
 ## Overview
 
-Boilerplate for building static websites with Vite in the module Bandra.
+Boilerplate for building static websites with Vite in the 
+module bundler.
 
 
 ![html5](https://img.shields.io/badge/-HTML5-222.svg?logo=html5&style=flat-square)
