@@ -6,7 +6,7 @@ $breakpoint-up: (
   'md': 'screen and (min-width:768px)',
   'xmd': 'screen and (min-width:1100px)',
   'lg': 'screen and (min-width:1370px)',
-  'xlg': 'screen and (min-width:1430px)'
+  'xlg': 'screen and (min-width:1430px)',
 ) !default;
 
 // max-width
@@ -14,7 +14,7 @@ $breakpoint-down: (
   'sm': 'screen and (max-width:639px)',
   'md': 'screen and (max-width:767px)',
   'xmd': 'screen and (max-width:1099px)',
-  'lg': 'screen and (max-width:1369px)'
+  'lg': 'screen and (max-width:1369px)',
 ) !default;
 
 // layout
@@ -25,14 +25,14 @@ $mainW: 1440px;
 // headerH
 $headerH: (
   lg: 100px,
-  sm: 60px
+  sm: 60px,
 );
 
 // color
 // ----------------------------------------------------------
 $colors: (
   main: #000,
-  white: #fff
+  white: #fff,
 );
 
 // font
