@@ -10,7 +10,7 @@
     "lint:ts": "eslint --ext .tsx,.ts src/",
     "format:ts": "prettier --write \"**/*.+(js|json|yml|ts|tsx)\"",
     "lint:css": "stylelint **/*.{css,scss,sass}",
-    "format:css": "stylelint --fix **/*.{css,scss,sass}",
+    "fix:css": "stylelint **/*.{css,scss,sass} --fix",
     "prepare": "husky install"
   },
   "devDependencies": {
